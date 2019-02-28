@@ -1,0 +1,27 @@
+<h1>Hello Handlebars</h1>
+
+<p>This is just a demo page</p>
+
+<h2 class="text-center mb-3">{{title}}</h2>
+
+<ul class="list-group">
+    {{#each posts}}
+        <li class="list-group-item"><h5>{{this.id}}: {{this.title}} ({{this.msg}})</h5></li>
+    {{/each}}
+</ul>
+
+<form action="/" method="POST" class="mt-4 mb-4">
+    <div class="form-group">
+        <label for="id">Id</label>
+        <input type="text" class="form-control" name="id">
+    </div>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name="title">
+    </div>
+    <div class="form-group">
+        <label for="msg">Message</label>
+        <input type="text" class="form-control" name="msg">
+    </div>
+    <input type="submit" value="POST" class="btn btn-primary btn-block">
+</form>
